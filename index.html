@@ -41,13 +41,377 @@
 
   <script>
     const partJobMap = {
-      "07-00292-00": [{ code: "B074A", description: "Oil charge - Replace", hours: 0.5 }],
-      "10-00431-07": [{ code: "A013A", description: "Compressor contactor - Replace", hours: 0.75 }],
-      "10-00439-00": [{ code: "A028A", description: "Transformer, Current Sensing - Replace", hours: 0.5 }],
-      "10-00439-02": [{ code: "A028A", description: "Transformer, Current Sensing - Replace", hours: 0.5 }],
-      "12-00309-06": [{ code: "B094A", description: "High-pressure cut-out - Replace", hours: 0.5 }],
-      // Continue adding more entries here...
-    };
+  "07-00292-00": [
+    {
+      "code": "B074A",
+      "description": "Oil charge - Replace",
+      "hours": 0.5
+    }
+  ],
+  "10-00431-07": [
+    {
+      "code": "A013A",
+      "description": "Compressor contactor   - Replace",
+      "hours": 0.75
+    }
+  ],
+  "10-00439-00": [
+    {
+      "code": "A028A",
+      "description": "Transformer, Current Sensing - Replace",
+      "hours": 0.5
+    }
+  ],
+  "10-00439-02": [
+    {
+      "code": "A028A",
+      "description": "Transformer, Current Sensing - Replace",
+      "hours": 0.5
+    }
+  ],
+  "12-00309-06": [
+    {
+      "code": "B094A",
+      "description": "High-pressure cut-out  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "12-00395-01SV": [
+    {
+      "code": "A058A",
+      "description": "Control sensor (supply air)  - Replace",
+      "hours": 0.75
+    }
+  ],
+  "12-00433-00RB": [
+    {
+      "code": "A029A",
+      "description": "Temperature display  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "12-00495-02SV": [
+    {
+      "code": "A051A",
+      "description": "Evaporation  coil defrost temperature sensor - Replace",
+      "hours": 0.5
+    },
+    {
+      "code": "A053A",
+      "description": "Ambient sensor  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "12-56009": [
+    {
+      "code": "A018A",
+      "description": "Controller  - Replace",
+      "hours": 1.0
+    }
+  ],
+  "12-56012": [
+    {
+      "code": "A018A",
+      "description": "Controller  - Replace",
+      "hours": 1.0
+    }
+  ],
+  "14-00353-20": [
+    {
+      "code": "B123A",
+      "description": "Valve Suction Modulation - Replace",
+      "hours": 0.25
+    }
+  ],
+  "14-00464-20": [
+    {
+      "code": "B087A",
+      "description": "Drier filter  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "14-00464-20PK25": [
+    {
+      "code": "B087A",
+      "description": "Drier filter  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "17-10811-05": [
+    {
+      "code": "B110A",
+      "description": "Service valve gasket   - Replace",
+      "hours": 0.25
+    }
+  ],
+  "18-10129-22": [
+    {
+      "code": "B064A",
+      "description": "Compressor, complete (with motor) - Replace",
+      "hours": 3.25
+    }
+  ],
+  "18-10178-22": [
+    {
+      "code": "B064A",
+      "description": "Compressor, complete (with motor) - Replace",
+      "hours": 2.0
+    }
+  ],
+  "22-02336-08": [
+    {
+      "code": "A034A",
+      "description": "Fuse  - Replace",
+      "hours": 0.25
+    }
+  ],
+  "22-02378-00PK10": [
+    {
+      "code": "A001A",
+      "description": "Power Plug (Complete) Male - Replace",
+      "hours": 0.5
+    },
+    {
+      "code": "A001A",
+      "description": "Power Plug (Complete) Male - Replace",
+      "hours": 0.0
+    }
+  ],
+  "22-50088-00": [
+    {
+      "code": "A005A",
+      "description": "Condenser fan motor capacitor - Replace",
+      "hours": 1.5
+    }
+  ],
+  "22-50088-02": [
+    {
+      "code": "A005A",
+      "description": "Condenser fan motor capacitor - Replace",
+      "hours": 1.5
+    }
+  ],
+  "22-50463-00PK5": [
+    {
+      "code": "A002X",
+      "description": "Cable, 460 V  - Splice",
+      "hours": 0.5
+    }
+  ],
+  "22-50463-00PK50": [
+    {
+      "code": "A002X",
+      "description": "Cable, 460 V  - Splice",
+      "hours": 0.5
+    }
+  ],
+  "22-66651-20": [
+    {
+      "code": "A002A",
+      "description": "Cable, 460 V  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "22-66654-20": [
+    {
+      "code": "A002A",
+      "description": "Cable, 460 V  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "30-50377-00": [
+    {
+      "code": "A041A",
+      "description": "DataCorder Battery Pack   - Replace",
+      "hours": 0.25
+    }
+  ],
+  "38-00557-00": [
+    {
+      "code": "A011A",
+      "description": "Fan  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "54-00742-00": [
+    {
+      "code": "A030A",
+      "description": "Evaporator Fan Motor  - Replace",
+      "hours": 1.0
+    },
+    {
+      "code": "A030A",
+      "description": "Evaporator Fan Motor  - Replace",
+      "hours": 2.0
+    }
+  ],
+  "66U1-7842-13": [
+    {
+      "code": "A008A",
+      "description": "Circuit breaker, 460 V  - Replace",
+      "hours": 1.0
+    }
+  ],
+  "69NT43-202-20PK5": [
+    {
+      "code": "B075A",
+      "description": "Coil Assembly Condenser - Replace",
+      "hours": 4.0
+    }
+  ],
+  "76-50210-00": [
+    {
+      "code": "B069A",
+      "description": "Terminal Mounting Kit Compressor - 5 kit - Replace",
+      "hours": 1.0
+    }
+  ],
+  "76-66694-00": [
+    {
+      "code": "A037A",
+      "description": "Humidity Sensor  - Replace",
+      "hours": 1.25
+    }
+  ],
+  "79-01697-06": [
+    {
+      "code": "B082A",
+      "description": "Evaporator access panel   - Replace",
+      "hours": 0.5
+    }
+  ],
+  "79-66669-04": [
+    {
+      "code": "A039A",
+      "description": "Controller Key Pad  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "79-66669-05": [
+    {
+      "code": "A039A",
+      "description": "Controller Key Pad  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "81-04203-21": [
+    {
+      "code": "B075A",
+      "description": "Coil Assembly Condenser - Replace",
+      "hours": 4.0
+    }
+  ],
+  "81-04203-25": [
+    {
+      "code": "B075A",
+      "description": "Coil Assembly Condenser - Replace",
+      "hours": 4.0
+    }
+  ],
+  "818260A": [
+    {
+      "code": "A002X",
+      "description": "Cable, 460 V  - Splice",
+      "hours": 0.5
+    }
+  ],
+  "818559A": [
+    {
+      "code": "A001A",
+      "description": "Power Plug (Complete) Male - Replace",
+      "hours": 0.5
+    }
+  ],
+  "818831A": [
+    {
+      "code": "A002A",
+      "description": "Cable, 460 V  - Replace",
+      "hours": 0.5
+    }
+  ],
+  "NaN": [
+    {
+      "code": "A001E",
+      "description": "Cable Receptacle (Elec Conn) Male - Remove and refit",
+      "hours": 0.5
+    },
+    {
+      "code": "A002G",
+      "description": "Cable, 460 V  - Rewire",
+      "hours": 0.25
+    },
+    {
+      "code": "A011E",
+      "description": "Fan  - Remove and refit",
+      "hours": 0.5
+    },
+    {
+      "code": "A029D",
+      "description": "Temperature display  - Re-secure",
+      "hours": 0.25
+    },
+    {
+      "code": "A039D",
+      "description": "Controller Key Pad  - Re-secure",
+      "hours": 0.25
+    },
+    {
+      "code": "B077E",
+      "description": "Condenser grille  - Remove and refit",
+      "hours": 0.25
+    },
+    {
+      "code": "B082E",
+      "description": "Evaporator access panel   - Remove and refit",
+      "hours": 0.25
+    },
+    {
+      "code": "B082E",
+      "description": "Evaporator access panel   - Remove and refit",
+      "hours": 0.5
+    },
+    {
+      "code": "B116D",
+      "description": "Liquid line service valve  - Re-secure",
+      "hours": 0.44
+    },
+    {
+      "code": "B123E",
+      "description": "Valve Suction Modulation - Remove and refit",
+      "hours": 0.5
+    },
+    {
+      "code": "E001GG",
+      "description": "Refrigerant R134A Charge  - Top up",
+      "hours": 0.5
+    },
+    {
+      "code": "E001II",
+      "description": "Refrigerant R134A Charge  - Recharge",
+      "hours": 0.5
+    },
+    {
+      "code": "F001SS",
+      "description": "Travel",
+      "hours": 0.5
+    },
+    {
+      "code": "F003U",
+      "description": "Service Fee",
+      "hours": 0.75
+    },
+    {
+      "code": "F003U",
+      "description": "Service Fee",
+      "hours": 0.5
+    },
+    {
+      "code": "F003U",
+      "description": "Service Fee",
+      "hours": 0.25
+    }
+  ]
+};
 
     const partInput = document.getElementById('part-search');
     const partResults = document.getElementById('part-results');
